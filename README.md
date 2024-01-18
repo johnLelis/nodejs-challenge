@@ -60,7 +60,7 @@ To get started with the Node.js Challenge, follow these steps:
 
 8. **View Swagger Documentation:**
 
-   Open your browser and go to [http://localhost:3000/api-docs](http://localhost:3000/api-docs) to view Swagger documentation.
+   Open your browser and go to [http://localhost:3000/](http://localhost:3000/) to view Swagger documentation.
 
 9. **View Unit Test Coverage:**
 
