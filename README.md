@@ -31,7 +31,6 @@ To get started with the Node.js Challenge, follow these steps:
    Create a `.env` file in the root of the project and define the following variables:
 
    ```env
-   DATABASE_URL=your_database_url
    PORT
    POSTGRES_USERNAME
    POSTGRES_PASSWORD
@@ -83,13 +82,7 @@ This will start a live server and automatically open the coverage report in your
 
 If you prefer using Docker, follow these steps instead:
 
-1. **Build the Docker container:**
-
-   ```bash
-   docker build -t nodejs-challenge .
-   ```
-
-2. **Run the Docker container:**
+1. **Run the Docker container:**
 
    ```bash
    docker-compose up -d
