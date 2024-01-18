@@ -1,0 +1,13 @@
+{
+  "development": {
+    "username": "root",
+    "password": "nodejschallenge",
+    "database": "postgres",
+    "host": "localhost",
+    "dialect": "postgres",
+    "migrationStorage": "json",
+    "migrationStoragePath": "/migrations.json",
+    "seederStorage": "json",
+    "seederStoragePath": "/seeders.json"
+  }
+}

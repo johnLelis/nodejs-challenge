@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Node.js Challenge API
+  version: 1.0.0
+  description: API documentation for the Node.js Challenge project
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+paths:
+  /api-docs:
+    get:
+      summary: Get Swagger documentation
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: Swagger UI documentation
+
+  /user/{userId}/settings:
+    get:
+      summary: Get user settings
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ID of the user
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                { preferredTheme: 'light', resultsPerPage: 20, sendEmail: true }
+
+    put:
+      summary: Update user settings
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          description: ID of the user
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            example:
+              { preferredTheme: 'dark', resultsPerPage: 50, sendEmail: false }
+      responses:
+        '200':
+          description: User settings updated successfully
+          content:
+            application/json:
+              example:
+                { preferredTheme: 'dark', resultsPerPage: 50, sendEmail: false }
+
+        '400':
+          description: Invalid request body
+          content:
+            application/json:
+              example:
+                {
+                  error: 'Invalid request body',
+                  details: ['Field is required'],
+                }
+
+        '404':
+          description: User not found
+          content:
+            application/json:
+              example: { error: 'User not found' }
+
+  /ping:
+    get:
+      summary: Ping endpoint
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example: { timestamp: '2024-01-18T12:00:00Z' }
