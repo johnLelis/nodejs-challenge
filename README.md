@@ -38,7 +38,7 @@ To get started with the Node.js Challenge, follow these steps:
    POSTGRES_PORT
    ```
 
-   Note: Adjust `your_database_url` to your actual database connection URL.
+   Note: You can use the .env.example which I included here.
 
 5. **Run migrations:**
 
