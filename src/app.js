@@ -14,13 +14,12 @@ const port = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
-// Swagger setup
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
 // Routes
 app.use('/user', userRoutes);
 app.use(pingRoutes);
 
+// Swagger setup
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Error handling middleware
 app.use(middlewares.notFoundMiddleware);
 app.use(middlewares.errorHandlerMiddleware);
