@@ -80,6 +80,16 @@ This will start a live server and automatically open the coverage report in your
 
 ## Using Docker
 
+If you choose to run the Node.js Challenge application and Postgres Database using Docker, ensure you have the following prerequisites installed on your machine:
+
+- **Docker:** The Docker platform allows you to package and distribute applications in containers. You can download and install Docker from the [official Docker website](https://www.docker.com/get-started).
+
+- **Docker Compose:** Docker Compose is a tool for defining and running multi-container Docker applications. It is often used to manage the services required for a complete application stack. Docker Compose is usually included with the Docker installation. Ensure it is available in your system by running:
+
+  ```bash
+  docker-compose --version
+  ```
+
 If you prefer using Docker, follow these steps instead:
 
 1. **Run the Docker container:**
@@ -88,7 +98,7 @@ If you prefer using Docker, follow these steps instead:
    docker-compose up -d
    ```
 
-This will start the Node.js Challenge application in a Docker container.
+This will start the Node.js Challenge application and Postgres Database in a Docker container.
 
 ## Scripts
 
