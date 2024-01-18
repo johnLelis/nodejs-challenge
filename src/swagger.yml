@@ -9,16 +9,6 @@ servers:
     description: Local development server
 
 paths:
-  /api-docs:
-    get:
-      summary: Get Swagger documentation
-      responses:
-        '200':
-          description: Successful response
-          content:
-            text/html:
-              example: Swagger UI documentation
-
   /user/{userId}/settings:
     get:
       summary: Get user settings
