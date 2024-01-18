@@ -1,6 +1,6 @@
 const request = require('supertest');
 const chai = require('chai');
-const app = require('../app'); // Adjust the path based on your project structure
+const app = require('../app');
 const UserSettings = require('../models/UserSettings'); // Adjust the path based on your project structure
 const sinon = require('sinon');
 const expect = chai.expect;
