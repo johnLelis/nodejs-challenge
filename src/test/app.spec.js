@@ -110,7 +110,7 @@ describe('User API Endpoints', () => {
 describe('Ping API Endpoint', () => {
   // Test GET /ping
   describe('GET /ping', () => {
-    it('should get user settings', done => {
+    it('should respond with a timestamp', done => {
       request(app)
         .get('/ping')
         .expect(200)
