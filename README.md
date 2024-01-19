@@ -113,7 +113,7 @@ This will start the Node.js Challenge application and Postgres Database in a Doc
 
 ## Swagger Documentation
 
-- Access the Swagger documentation by visiting [http://localhost:3000/api-docs](http://localhost:3000/api-docs) after starting the server.
+- Access the Swagger documentation by visiting [http://localhost:3000](http://localhost:3000/) after starting the server.
 
 ## Dependencies
 
