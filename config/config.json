@@ -4,10 +4,15 @@
     "password": "nodejschallenge",
     "database": "postgres",
     "host": "localhost",
-    "dialect": "postgres",
-    "migrationStorage": "json",
-    "migrationStoragePath": "/migrations.json",
-    "seederStorage": "json",
-    "seederStoragePath": "/seeders.json"
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": "nodejschallenge",
+    "database": "postgres_db_test",
+    "host": "localhost",
+    "port": 5433,
+    "dialect": "postgres"
   }
 }

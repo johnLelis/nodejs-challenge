@@ -6,11 +6,13 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "migrate": "sequelize db:migrate --migrations-path ./src/db/migrations",
-    "undo-migrate": "sequelize db:migrate:undo --migrations-path ./src/db/migrations",
+    "drop:db": "cross-env  NODE_ENV=development sequelize db:drop --migrations-path ./src/db/migrations",
+    "migrate:test": "cross-env  NODE_ENV=test sequelize db:migrate --migrations-path ./src/db/migrations",
+    "migrate:dev": "cross-env  NODE_ENV=development sequelize db:migrate --migrations-path ./src/db/migrations",
+    "undo:migrate": "sequelize db:migrate:undo --migrations-path ./src/db/migrations",
     "seeder": "sequelize db:seed:all --seeders-path ./src/db/seeders",
-    "undo-seeder": "sequelize db:seed:undo:all --seeders-path ./src/db/seeders",
-    "test": "mocha --config mocha.config.js",
+    "undo:seeder": "cross-env  NODE_ENV=development sequelize db:seed:undo:all --seeders-path ./src/db/seeders",
+    "test": "mocha  --config mocha.config.js",
     "test:coverage": "nyc mocha --config mocha.config.js",
     "coverage:report": "nyc report --reporter=html"
   },
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.4.1",
+    "cross-env": "^7.0.3",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.3",
     "nyc": "^15.1.0",

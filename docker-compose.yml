@@ -14,6 +14,19 @@ services:
     networks:
       - nodejs-app
 
+  db-test:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: nodejschallenge
+      POSTGRES_DB: postgres_db_test
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres-data-test:/var/lib/postgresql/data
+    networks:
+      - nodejs-app
+
   node-challenge-app:
     build:
       context: .
@@ -21,11 +34,13 @@ services:
       - 3000:3000
     depends_on:
       - db
+      - db-test
     networks:
       - nodejs-app
 
 volumes:
   postgres-data:
+  postgres-data-test:
 
 networks:
   nodejs-app:
