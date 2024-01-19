@@ -92,7 +92,13 @@ If you choose to run the Node.js Challenge application and Postgres Database usi
 
 If you prefer using Docker, follow these steps instead:
 
-1. **Run the Docker container:**
+1. **Build the Docker images:**
+
+   ```bash
+   docker-compose build
+   ```
+
+2. **Run the Docker container:**
 
    ```bash
    docker-compose up -d
